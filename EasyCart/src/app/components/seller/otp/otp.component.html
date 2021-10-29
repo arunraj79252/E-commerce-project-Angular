@@ -1,0 +1,32 @@
+<div id="reg3" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+
+    <div class="row">
+        <div class="col">
+            <span>
+                <i class="bi bi-cart4" style="color: floralwhite;"></i>
+            </span>
+            <h1>Easy Cart</h1>
+        </div>
+    </div>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+
+        <!-- <a class="me-3 py-2 text-dark text-decoration-none" routerLink="#">Home</a> -->
+
+    </nav>
+</div>
+
+<div class="container" style="height: 50%;width: 50%;margin-top: 10%;margin-left: 25%;background: cadetblue;">
+    <form [formGroup]="otpForm" (ngSubmit)="otpSub()" style="margin-top: 10%;margin-left: 5%;">
+        <div class="mb-3">
+            <label for="otp" class="form-label"> Enter the OTP</label>
+            <input type="text" class="form-control" id="otp" formControlName="otp" name="otp">
+            <div *ngIf="this.otpForm.get('otp')?.touched && f.otp.errors?.required" class="error">Can not be Empty
+            </div>
+            <div *ngIf="this.otpForm.controls['otp'].errors?.pattern" class="error">Invalid OTP </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>

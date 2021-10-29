@@ -1,0 +1,63 @@
+
+<div id="reg3" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+   
+    <div class="row">
+        <div class="col">
+          <span>
+          <i class="bi bi-cart4" style="color: floralwhite;"></i>
+        </span>
+         <h1>Easy Cart</h1>
+        </div>
+      </div>
+      <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/admin-home" style="margin-left: 87%;"><h3 style="color: azure;">Back</h3></a> 
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      
+       <!-- <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/admin-home" style="margin-left: 70%;">Back</a>  -->
+      
+    </nav>
+  </div>
+<h1 style="margin-left: 5%;">Logistics</h1>
+<div class="row">
+    <div class="col-8">
+
+        <div class="container">
+            <table class=" table-users">
+                <thead>
+                    <tr>
+                        <th>Logistics Id</th>
+                        <th>Customer Id</th>
+                        <th> Product Id</th>
+                        <th>Seller Id</th>
+                        <th>Order Id</th>
+                        <th>Shipped Date</th>
+                        <th>Logistics Status</th>
+                        <th>Update Status</th>
+                        <th>..</th>
+                    </tr>
+                </thead>>
+                <tbody>
+                    <tr *ngFor="let data of logisticsData ">
+                        <td>{{data.logisticsId}}</td>
+                        <td>{{data.customerId}}</td>
+                        <td>{{data.productId}}</td>
+                        <td>{{data.sellerId}}</td>
+                        <td>{{data.orderId}}</td>
+                        <td>{{data.shippedDate}}</td>
+                        <td>{{data.logisticsStatus}}</td>
+                        <td> <select  class="form-control" (change)="selectChangeHandler($event)">
+                            <option value="select"> -select-</option>
+                            <option value="Shipped"> Shipped</option>
+                            <option value="Pending"> Pending</option>
+                            <option value="In transist"> In transist</option>
+                            <option value="sjkjk"> sjkjk</option>
+                          </select></td>
+                        <td><button class="btn" (click)="updateStatus(data.logisticsId)">Update</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            
+        </div>
+    </div>
+    <div class="col"></div>
+</div>

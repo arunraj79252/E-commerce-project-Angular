@@ -1,0 +1,33 @@
+<div id="reg3" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+
+    <div class="row">
+        <div class="col">
+            <span>
+                <i class="bi bi-cart4" style="color: floralwhite;"></i>
+            </span>
+            <h1>Easy Cart</h1>
+        </div>
+    </div>
+    <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/admin-home" style="margin-left: 87%;">
+        <h3 style="color: azure;">Back</h3>
+    </a>
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+
+        <!-- <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/admin-home" style="margin-left: 70%;">Back</a>  -->
+
+    </nav>
+</div>
+<h2>Notifications....</h2>
+<div class="row">
+    <div class="col">
+<div *ngFor="let p of notification">
+    <div class="card">
+        <p>
+            <img style="width: 50px;height: 50px;" src="{{rImage}}{{p.seller.logo}}" alt="" />
+            New seller {{p.message}} with name
+            <b>{{p.seller.name}} </b> on {{p.createDate}}
+        </p>
+    </div>
+</div>
+</div>
+</div>

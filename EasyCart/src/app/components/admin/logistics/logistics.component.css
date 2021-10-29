@@ -1,0 +1,38 @@
+/* .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+table, th, td {
+    border: 1px solid black;
+  }
+  table {
+    width: 110%;
+  }
+  th {
+    height: 70px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align:center;
+  }
+  table{
+      background-color: cadetblue;
+      
+  }
+.btn {
+    background-color:dodgerblue;
+    border: none;
+    color: white;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+  }
+  #reg3{
+    background: darkslategrey;
+    color: floralwhite;
+}

@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()" style="margin-top: 30%;margin-left: 5%;">
+    <div class="mb-3">
+        <h1>Sign in</h1>
+
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+
+        <input type="email" formControlName="email" name="email"  class="form-control" id="email"
+            aria-describedby="emailHelp">
+        
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+
+        <input type="password" formControlName="password" name="password" class="form-control" id="password">
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a routerLink="/user-reg">New Registration</a>
+</form>

@@ -1,0 +1,125 @@
+
+<div id="reg3" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+   
+    <div class="row">
+        <div class="col">
+          <span>
+          <i class="bi bi-cart4" style="color: floralwhite;"></i>
+        </span>
+         <h1>Easy Cart</h1>
+        </div>
+      </div>
+      <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/admin-home" style="margin-left: 87%;"><h3 style="color: azure;">Back</h3></a> 
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      
+       <!-- <a class="me-3 py-2 text-dark text-decoration-none" routerLink="/admin-home" style="margin-left: 70%;">Back</a>  -->
+      
+    </nav>
+  </div>
+  <form [formGroup]="profileForm">
+<div class="container">
+    <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="account-settings">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="{{rImage}}{{customer.logo}}" onerror="this.src='https://bootdey.com/img/Content/avatar/avatar7.png'" alt="Maxwell Admin">
+                        
+                    </div>
+                    <h5 class="user-name">{{customer.name}}</h5>
+                    <h6 class="user-email">{{customer.email}}</h6>
+                    <label for="file">Update Image:</label>
+            <input type="file" class="form-control" accept="image/*" (change)="onSelectFile($event)" style="height: 100%;">
+            <button type="button" id="submit" name="submit" (click)="updateImage()" class="btn btn-primary">Update</button>
+                </div>
+                <!-- <div class="about">
+                    <h5>About</h5>
+                    <p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mb-2 text-primary">Personal Details</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" formControlName="name" >
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" formControlName="email" >
+                    </div>
+                </div>
+                <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                    </div>
+                </div> -->
+                <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="website">Website URL</label>
+                        <input type="url" class="form-control" id="website" placeholder="Website url">
+                    </div>
+                </div> -->
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mt-3 mb-2 text-primary">Address</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="houseName">House Name</label>
+                        <input type="name" class="form-control" id="houseName" name="houseName"  formControlName="houseName">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="Street">Street</label>
+                        <input type="name" class="form-control" id="street" name="street"  formControlName="street">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="name" class="form-control" id="city"  name="city" formControlName="city">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" id="state" name="state"  formControlName="state">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" class="form-control" id="zip" name="zip"  formControlName="zip">
+                    </div>
+                </div>
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="text-right">
+                        <button type="button" id="submit" name="submit" (click)="cancel()" class="btn btn-secondary">Cancel</button>
+                        <button type="button" id="submit" name="submit" (click)="updateProfile()" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</form>
